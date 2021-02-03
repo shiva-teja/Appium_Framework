@@ -9,7 +9,7 @@
     <classes>
       <class name="excercise.Appium_Framework.NoBrokerLaunch">
         <methods>
-          <include name="nobroker"/>
+          <include name="nobroker" invocation-numbers="0"/>
           <include name="killAllNodes"/>
         </methods>
       </class> <!-- excercise.Appium_Framework.NoBrokerLaunch -->

@@ -2,16 +2,53 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-03T03:56:04 IST" name="Suite" finished-at="2021-02-03T03:59:25 IST" duration-ms="201272">
+  <suite started-at="2021-02-03T14:11:58 IST" name="Suite" finished-at="2021-02-03T14:15:06 IST" duration-ms="187871">
     <groups>
     </groups>
-    <test started-at="2021-02-03T03:56:04 IST" name="Test" finished-at="2021-02-03T03:59:25 IST" duration-ms="201272">
+    <test started-at="2021-02-03T14:11:58 IST" name="Test" finished-at="2021-02-03T14:15:06 IST" duration-ms="187871">
       <class name="excercise.Appium_Framework.NoBrokerLaunch">
-        <test-method is-config="true" signature="killAllNodes()[pri:0, instance:excercise.Appium_Framework.NoBrokerLaunch@22ef9844]" started-at="2021-02-03T03:56:04 IST" name="killAllNodes" finished-at="2021-02-03T03:56:13 IST" duration-ms="9067" status="PASS">
+        <test-method is-config="true" signature="killAllNodes()[pri:0, instance:excercise.Appium_Framework.NoBrokerLaunch@6283d8b8]" started-at="2021-02-03T14:11:58 IST" name="killAllNodes" finished-at="2021-02-03T14:12:07 IST" duration-ms="9071" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killAllNodes -->
-        <test-method signature="nobroker()[pri:0, instance:excercise.Appium_Framework.NoBrokerLaunch@22ef9844]" started-at="2021-02-03T03:56:13 IST" name="nobroker" finished-at="2021-02-03T03:59:25 IST" duration-ms="192115" status="PASS">
+        <test-method signature="nobroker(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:excercise.Appium_Framework.NoBrokerLaunch@6283d8b8]" started-at="2021-02-03T14:12:07 IST" name="nobroker" data-provider="InputData" finished-at="2021-02-03T14:15:06 IST" duration-ms="178703" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Marathahalli]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[HSR Layout]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1237567899]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[nobroker123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Testing]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Thank you for the feedback]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- nobroker -->

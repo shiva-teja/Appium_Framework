@@ -22,8 +22,6 @@ public class LandingPage extends Base{
 	{
 		this.driver=driver_base;
 	}
-	
-
 	public void allowpermissions()
 	{
 		LandingPageObjects l=new LandingPageObjects(driver);
@@ -35,21 +33,13 @@ public class LandingPage extends Base{
 	public void searchandselectautocomplete(String text) throws InterruptedException
 	{
 		SearchPageObjects sp=new SearchPageObjects(driver);
-//		sp.localitytextbox.sendKeys("Marathahalli");
 		sp.localitytextbox.sendKeys(text);
-		
-//		driver.hideKeyboard();
 		TouchAction t = new TouchAction(driver);
 		int x =  sp.localitytextbox.getLocation().getX();
 		int y = sp.localitytextbox.getLocation().getY();
-
 		System.out.println("X value: “+x+” Y value: "+y);
 		Thread.sleep(2000);
-
-		
 		t.tap(point(x+60, y+260)).release();
-//		TouchAction action = new TouchAction(driver).tap(point(x+60, y+260)).release();
-//		action.tap(point(x+60, y+260)).release().perform();
 		t.perform();
 	}
 	public void tapon(WebElement ele)
@@ -57,15 +47,4 @@ public class LandingPage extends Base{
 		TouchAction t = new TouchAction(driver);
 		t.tap(tapOptions().withElement(element(ele))).perform();
 	}
-	
-	
-	public void flingVerticalToBottom_Android() {
-        try {
-            driver.findElements(MobileBy.AndroidUIAutomator(
-                    "new UiScrollable(new UiSelector()).setAsVerticalList().flingToEnd(2)"));
-        } catch (Exception e) {
-            // ignore
-        }
-    }
-
 }

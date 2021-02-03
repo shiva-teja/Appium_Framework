@@ -53,13 +53,10 @@ public class Base {
 		Thread.sleep(6000);
 	}
 	public static AndroidDriver<AndroidElement> capabilities(String apkname) throws IOException, InterruptedException{
-
-
 		Properties prop =new Properties();
 		String usrdir=System.getProperty("user.dir");
 		FileInputStream fil=new FileInputStream(usrdir+"\\src\\main\\java\\excercise\\Appium_Framework\\global.properties");
 		prop.load(fil);
-
 		File f=new File("src");
 		File fs=new File(f,(String) prop.get(apkname));
 		DesiredCapabilities cap=new DesiredCapabilities();
@@ -69,24 +66,15 @@ public class Base {
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,10);
 		cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
-		//		cap.setCapability("deviceName", "Nokia 5");
-		//		cap.setCapability("udid", "D1AGAD57B1003790");
-//		cap.setCapability("platformName", "Android");
-//		cap.setCapability("platformVersion", "9");
 		cap.setCapability("appPackage", "com.nobroker.app");
-		//		cap.setCapability("automationName", "UiAutomator1");
 		cap.setCapability("appActivity", "com.nobroker.app.activities.NBSplashScreen");
-
 		driver=new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
 		return driver;
-
-
 	}
 	public static void getscreenshot(String s) throws IOException
 	{
-	File scrfile=	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(scrfile,new File(System.getProperty("user.dir")+"\\"+s+".png"));
-	
+		File scrfile=	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrfile,new File(System.getProperty("user.dir")+"\\"+s+".png"));
 	}
 
 }

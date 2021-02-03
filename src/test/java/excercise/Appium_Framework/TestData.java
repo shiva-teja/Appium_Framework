@@ -7,11 +7,10 @@ public class TestData {
 	@DataProvider(name="InputData")
 	public Object[][] getDataforEditField()
 	{
-		//2 sets of data, "hello" , "!@#$$"
 		Object[][] obj=new Object[][]
 				{
 			
-			{"hello"}, {"@#$%"}
+			{"Bangalore","Marathahalli","HSR Layout","1237567899","nobroker123","Testing","Thank you for the feedback"}
 				};
 				
 				return obj;

@@ -16,9 +16,9 @@ import static io.appium.java_client.touch.offset.ElementOption.element;
 import static io.appium.java_client.touch.offset.PointOption.point;
 
 public class Utilities {
-	
+
 	AndroidDriver<AndroidElement> driver;
-	
+
 	public Utilities(AndroidDriver<AndroidElement> driver)
 	{
 		this.driver=driver;
@@ -33,17 +33,15 @@ public class Utilities {
 	}
 	public void scrollAndClick(String visibleText) {
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+visibleText+"\").instance(0))").click();
-	        }
-	public void scrollDown() {
-	    Dimension size = driver.manage().window().getSize();
-	    int x = size.getWidth() / 2;
-	    int starty = (int) (size.getHeight() * 0.80);
-	    int endy = (int) (size.getHeight() * 0.10);
-//	    driver.swipe(x, starty, x, endy, 2000);
-	    TouchAction t=new TouchAction(driver);
-//	    t.tap(point(x, starty)).waitAction().moveTo(point(x, endy)).release().perform();
-	    t.press(PointOption.point(x, starty)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(5))).moveTo(PointOption.point(x, endy)).release().perform();
 	}
-	    
+	public void scrollDown() {
+		Dimension size = driver.manage().window().getSize();
+		int x = size.getWidth() / 2;
+		int starty = (int) (size.getHeight() * 0.80);
+		int endy = (int) (size.getHeight() * 0.10);
+		TouchAction t=new TouchAction(driver);
+		t.press(PointOption.point(x, starty)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(5))).moveTo(PointOption.point(x, endy)).release().perform();
+	}
+
 
 }
