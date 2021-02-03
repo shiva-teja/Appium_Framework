@@ -21,21 +21,8 @@ public class PropertiesPageObjects {
 	
 	@AndroidFindBy(id="com.nobroker.app:id/tv_report_wrong_info")
 	public List <WebElement> wronginfo;
-//	
-//	
+	
 	@AndroidFindBy(id="com.nobroker.app:id/tv_report_wrong_info")
 	public WebElement wronginfobutton; 
-//	
-//	@AndroidFindBy(id="com.nobroker.app:id/nearByRadio")
-//	public WebElement nearbycheckbox;
-//	
-//	@AndroidFindBy(id="com.nobroker.app:id/bhktwo")
-//	public WebElement twobhk;
-//	
-//	@AndroidFindBy(id="com.nobroker.app:id/bhkthree")
-//	public WebElement threebhk;
-//	
-//	@AndroidFindBy(id="com.nobroker.app:id/searchProperty")
-//	public WebElement searchpropertybutton;
 
 }
